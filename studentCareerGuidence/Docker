@@ -1,0 +1,10 @@
+FROM php:8.2-apache
+
+# MySQL Database Extensions install cheyadaniki
+RUN docker-php-ext-install mysqli pdo pdo_mysql
+
+# Project files anni server loki copy cheyadaniki
+COPY . /var/www/html/
+
+# Apache web server port
+EXPOSE 80

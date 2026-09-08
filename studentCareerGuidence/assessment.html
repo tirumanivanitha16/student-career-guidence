@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Career Assessment Test - CareerGuide</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", sans-serif;
+      }
+      body {
+        display: flex;
+        background-color: #f4f6f9;
+        min-height: 100vh;
+      }
+      .sidebar {
+        width: 250px;
+        background-color: #0f2137;
+        color: #fff;
+        padding: 20px 0;
+        flex-shrink: 0;
+      }
+      .sidebar h2 {
+        text-align: center;
+        padding-bottom: 20px;
+        border-bottom: 2px solid #e2b714;
+        font-size: 22px;
+        margin-bottom: 30px;
+      }
+      .sidebar a {
+        display: flex;
+        align-items: center;
+        padding: 15px 25px;
+        color: #a0aec0;
+        text-decoration: none;
+        font-size: 16px;
+        transition: 0.3s;
+      }
+      .sidebar a:hover,
+      .sidebar a.active {
+        background-color: #1a365d;
+        color: #fff;
+        border-left: 4px solid #e2b714;
+      }
+      .main-content {
+        flex: 1;
+        padding: 30px;
+        overflow-y: auto;
+      }
+      .container {
+        background: #fff;
+        border-radius: 10px;
+        padding: 30px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        max-width: 900px;
+        margin: auto;
+      }
+      .q-card {
+        margin-bottom: 25px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #edf2f7;
+      }
+      .q-card h3 {
+        font-size: 16px;
+        color: #1a202c;
+        margin-bottom: 12px;
+      }
+      .option {
+        display: block;
+        padding: 10px 15px;
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 6px;
+        margin-bottom: 8px;
+        cursor: pointer;
+        transition: 0.2s;
+      }
+      .option:hover {
+        background: #edf2f7;
+      }
+      .option input {
+        margin-right: 10px;
+      }
+      .btn-submit {
+        width: 100%;
+        padding: 15px;
+        background: #d69e2e;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .btn-submit:hover {
+        background: #b7791f;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sidebar">
+      <h2>CareerGuide</h2>
+      <a href="dashboard.php">📊 Dashboard</a>
+      <a href="careers.php">💼 Explore Careers</a>
+      <a href="assessment.html" class="active">📝 Career Test</a>
+      <a href="profile.php">👤 Profile</a>
+      <a href="php/logout.php">🚪 Logout</a>
+    </div>
+
+    <div class="main-content">
+      <div class="container">
+        <h2 style="color: #0f2137; margin-bottom: 10px">
+          Comprehensive Career Assessment
+        </h2>
+        <p style="color: #718096; margin-bottom: 25px">
+          Please answer all 15 questions honestly to get the most accurate
+          career path recommendation.
+        </p>
+
+        <form action="php/assessment_process.php" method="POST">
+          <!-- Q1 -->
+          <div class="q-card">
+            <h3>1. What activity do you enjoy most in your free time?</h3>
+            <label class="option"
+              ><input type="radio" name="q1" value="tech" required /> Coding,
+              solving puzzles, or playing around with computer hardware.</label
+            >
+            <label class="option"
+              ><input type="radio" name="q1" value="medical" /> Reading about
+              health, human anatomy, or volunteering at health camps.</label
+            >
+            <label class="option"
+              ><input type="radio" name="q1" value="creative" /> Sketching,
+              writing stories, video editing, or graphic designing.</label
+            >
+            <label class="option"
+              ><input type="radio" name="q1" value="business" /> Organizing
+              events, managing budgets, or tracking stock markets.</label
+            >
+          </div>
+
+          <!-- Q2 -->
+          <div class="q-card">
+            <h3>2. Which school subject was/is your favorite?</h3>
+            <label class="option"
+              ><input type="radio" name="q2" value="tech" required />
+              Mathematics / Computer Science</label
+            >
+            <label class="option"
+              ><input type="radio" name="q2" value="medical" /> Biology /
+              Chemistry</label
+            >
+            <label class="option"
+              ><input type="radio" name="q2" value="creative" /> Literature /
+              Art / History</label
+            >
+            <label class="option"
+              ><input type="radio" name="q2" value="business" /> Economics /
+              Commerce / Accounts</label
+            >
+          </div>
+
+          <!-- Q3 -->
+          <div class="q-card">
+            <h3>3. How do you prefer to solve problems?</h3>
+            <label class="option"
+              ><input type="radio" name="q3" value="tech" required /> Logical
+              step-by-step algorithms and data analysis.</label
+            >
+            <label class="option"
+              ><input type="radio" name="q3" value="medical" /> Scientific
+              research, diagnosis, and practical testing.</label
+            >
+            <label class="option"
+              ><input type="radio" name="q3" value="creative" /> Thinking
+              outside the box and visual imagination.</label
+            >
+            <label class="option"
+              ><input type="radio" name="q3" value="business" /> Negotiating,
+              managing resources, and strategic planning.</label
+            >
+          </div>
+
+          <!-- Q4 -->
+          <div class="q-card">
+            <h3>4. What kind of workplace environment do you prefer?</h3>
+            <label class="option"
+              ><input type="radio" name="q4" value="tech" required /> Tech
+              office or remote software setup.</label
+            >
+            <label class="option"
+              ><input type="radio" name="q4" value="medical" /> Hospital,
+              clinic, or research laboratory.</label
+            >
+            <label class="option"
+              ><input type="radio" name="q4" value="creative" /> Design studio,
+              media agency, or flexible creative space.</label
+            >
+            <label class="option"
+              ><input type="radio" name="q4" value="business" /> Corporate
+              office or startup leadership environment.</label
+            >
+          </div>
+
+          <!-- Q5 -->
+          <div class="q-card">
+            <h3>5. What motivates you the most in a job?</h3>
+            <label class="option"
+              ><input type="radio" name="q5" value="tech" required /> Building
+              innovative tools and solving complex logical challenges.</label
+            >
+            <label class="option"
+              ><input type="radio" name="q5" value="medical" /> Saving lives and
+              improving human health/well-being.</label
+            >
+            <label class="option"
+              ><input type="radio" name="q5" value="creative" /> Expressing
+              artistic vision and creating unique content.</label
+            >
+            <label class="option"
+              ><input type="radio" name="q5" value="business" /> Financial
+              success, leadership, and scaling a business.</label
+            >
+          </div>
+
+          <!-- Q6 -->
+          <div class="q-card">
+            <h3>
+              6. Which tool or software sounds most interesting to use daily?
+            </h3>
+            <label class="option"
+              ><input type="radio" name="q6" value="tech" required /> VS Code,
+              Python, GitHub, or Cloud platforms.</label
+            >
+            <label class="option"
+              ><input type="radio" name="q6" value="medical" /> Stethoscope,
+              Microscope, or Diagnostic scanners.</label
+            >
+            <label class="option"
+              ><input type="radio" name="q6" value="creative" /> Photoshop,
+              Premiere Pro, Figma, or Canva.</label
+            >
+            <label class="option"
+              ><input type="radio" name="q6" value="business" /> Excel, Tally,
+              CRM tools, or Presentation dashboards.</label
+            >
+          </div>
+
+          <!-- Q7 -->
+          <div class="q-card">
+            <h3>7. How do you handle group project assignments?</h3>
+            <label class="option"
+              ><input type="radio" name="q7" value="tech" required /> I build
+              the technical logic or core system.</label
+            >
+            <label class="option"
+              ><input type="radio" name="q7" value="medical" /> I handle
+              research, facts, and scientific data accuracy.</label
+            >
+            <label class="option"
+              ><input type="radio" name="q7" value="creative" /> I design the
+              presentation, graphics, and overall look.</label
+            >
+            <label class="option"
+              ><input type="radio" name="q7" value="business" /> I lead the
+              team, delegate tasks, and present the final pitch.</label
+            >
+          </div>
+
+          <!-- Q8 -->
+          <div class="q-card">
+            <h3>
+              8. What type of Youtube/Internet content do you consume most?
+            </h3>
+            <label class="option"
+              ><input type="radio" name="q8" value="tech" required /> Tech
+              reviews, AI developments, coding tutorials.</label
+            >
+            <label class="option"
+              ><input type="radio" name="q8" value="medical" /> Fitness, medical
+              documentaries, health awareness videos.</label
+            >
+            <label class="option"
+              ><input type="radio" name="q8" value="creative" /> Filmmaking, art
+              tutorials, music, UI/UX designs.</label
+            >
+            <label class="option"
+              ><input type="radio" name="q8" value="business" /> Business case
+              studies, stock market tips, marketing ideas.</label
+            >
+          </div>
+
+          <!-- Q9 -->
+          <div class="q-card">
+            <h3>9. Which skill do you consider your biggest strength?</h3>
+            <label class="option"
+              ><input type="radio" name="q9" value="tech" required /> Analytical
+              reasoning and technical understanding.</label
+            >
+            <label class="option"
+              ><input type="radio" name="q9" value="medical" /> Empathy,
+              patience, and attention to details.</label
+            >
+            <label class="option"
+              ><input type="radio" name="q9" value="creative" /> Creativity,
+              storytelling, and visual aesthetics.</label
+            >
+            <label class="option"
+              ><input type="radio" name="q9" value="business" /> Communication,
+              leadership, and decision making.</label
+            >
+          </div>
+
+          <!-- Q10 -->
+          <div class="q-card">
+            <h3>10. What kind of problems do you like solving?</h3>
+            <label class="option"
+              ><input type="radio" name="q10" value="tech" required /> Fixing
+              software bugs and technical errors.</label
+            >
+            <label class="option"
+              ><input type="radio" name="q10" value="medical" /> Finding
+              treatments or curing health conditions.</label
+            >
+            <label class="option"
+              ><input type="radio" name="q10" value="creative" /> Turning
+              abstract ideas into beautiful visual designs.</label
+            >
+            <label class="option"
+              ><input type="radio" name="q10" value="business" /> Increasing
+              sales, reducing costs, and growing brand value.</label
+            >
+          </div>
+
+          <!-- Q11 -->
+          <div class="q-card">
+            <h3>
+              11. If you were to publish a book or article, what would it be
+              about?
+            </h3>
+            <label class="option"
+              ><input type="radio" name="q11" value="tech" required /> Future of
+              Artificial Intelligence and Automation.</label
+            >
+            <label class="option"
+              ><input type="radio" name="q11" value="medical" /> Breakthroughs
+              in Modern Healthcare and Medical Science.</label
+            >
+            <label class="option"
+              ><input type="radio" name="q11" value="creative" /> Fiction
+              Novels, Photography collections, or Graphic Art.</label
+            >
+            <label class="option"
+              ><input type="radio" name="q11" value="business" /> Secrets of
+              Successful Entrepreneurs and Financial Growth.</label
+            >
+          </div>
+
+          <!-- Q12 -->
+          <div class="q-card">
+            <h3>12. What sounds like an ideal weekend project?</h3>
+            <label class="option"
+              ><input type="radio" name="q12" value="tech" required />
+              Developing a mobile app or a mini web application.</label
+            >
+            <label class="option"
+              ><input type="radio" name="q12" value="medical" /> Attending a
+              health awareness workshop or first-aid training.</label
+            >
+            <label class="option"
+              ><input type="radio" name="q12" value="creative" /> Editing a
+              short film, painting, or designing posters.</label
+            >
+            <label class="option"
+              ><input type="radio" name="q12" value="business" /> Planning a
+              small online business or investment portfolio.</label
+            >
+          </div>
+
+          <!-- Q13 -->
+          <div class="q-card">
+            <h3>13. Which headline would attract your attention first?</h3>
+            <label class="option"
+              ><input type="radio" name="q13" value="tech" required /> "New
+              Supercomputer Achieves Unprecedented Speed"</label
+            >
+            <label class="option"
+              ><input type="radio" name="q13" value="medical" /> "New Vaccine
+              Successfully Tested in Clinical Trials"</label
+            >
+            <label class="option"
+              ><input type="radio" name="q13" value="creative" /> "International
+              Film & Art Festival Winners Announced"</label
+            >
+            <label class="option"
+              ><input type="radio" name="q13" value="business" /> "Top Tech
+              Startup Reaches $1 Billion Valuation"</label
+            >
+          </div>
+
+          <!-- Q14 -->
+          <div class="q-card">
+            <h3>14. What type of work style suits you best?</h3>
+            <label class="option"
+              ><input type="radio" name="q14" value="tech" required />
+              Structured coding sprint with minimal human interruption.</label
+            >
+            <label class="option"
+              ><input type="radio" name="q14" value="medical" /> Hands-on
+              patient care and scientific experimentation.</label
+            >
+            <label class="option"
+              ><input type="radio" name="q14" value="creative" /> Flexible,
+              artistic, and experimental workspace.</label
+            >
+            <label class="option"
+              ><input type="radio" name="q14" value="business" /> High-energy
+              meetings, client pitching, and team management.</label
+            >
+          </div>
+
+          <!-- Q15 -->
+          <div class="q-card">
+            <h3>15. Where do you see yourself in 5 to 10 years?</h3>
+            <label class="option"
+              ><input type="radio" name="q15" value="tech" required /> Chief
+              Technology Officer (CTO) or Senior Software Architect.</label
+            >
+            <label class="option"
+              ><input type="radio" name="q15" value="medical" /> Specialist
+              Doctor, Surgeon, or Medical Researcher.</label
+            >
+            <label class="option"
+              ><input type="radio" name="q15" value="creative" /> Creative
+              Director, Designer, or Media Creator.</label
+            >
+            <label class="option"
+              ><input type="radio" name="q15" value="business" /> CEO, Business
+              Director, or Successful Entrepreneur.</label
+            >
+          </div>
+
+          <button type="submit" class="btn-submit">
+            Submit Test & View Results
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

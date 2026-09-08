@@ -1,0 +1,898 @@
+/* 1. Resetting defaults */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #F8F9FA;
+    color: #2C2C2C;
+}
+
+/* 2. Header & Nav Design */
+header{
+    background: #1E3A5F; /* Dark Blue */
+    padding: 20px 40px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1{
+    color: #D4AF37; /* Royal Gold */
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.menu{
+    display: flex;
+    gap: 30px;
+}
+
+.menu a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.menu a:hover{
+    color: #D4AF37;
+}
+
+/* 3. Buttons Design */
+.button{
+    display: flex;
+    gap: 15px;
+}
+
+.button button{
+    padding: 8px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-btn{
+    background: transparent;
+    color: white;
+    border: 2px solid white !important;
+}
+
+.register-btn{
+    background: #D4AF37;
+    color: white;
+}
+
+.login-btn:hover{
+    background: white;
+    color: #1E3A5F;
+}
+
+.register-btn:hover{
+    background: transparent;
+    color: #D4AF37;
+    outline: 2px solid #D4AF37;
+}
+/* 4. Hero Section Design */
+.hero {
+    background: linear-gradient(rgba(30, 58, 95, 0.85), rgba(30, 58, 95, 0.95)), 
+                url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1920') no-repeat center center/cover;
+    padding: 120px 0;
+    text-align: center;
+    color: white;
+}
+
+.hero-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 45px;
+    color: #D4AF37; /* Royal Gold */
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #F8F9FA;
+    margin-bottom: 35px;
+    line-height: 1.6;
+}
+
+.hero-btn {
+    padding: 14px 35px;
+    background: #D4AF37;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.hero-btn:hover {
+    background: white;
+    color: #1E3A5F;
+    transform: translateY(-3px);
+}
+/* 5. About Section Design */
+.about {
+    padding: 80px 0;
+    background: #ffffff; /* pure white background to separate from hero */
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 36px;
+    text-align: center;
+    color: #1E3A5F; /* Dark Blue */
+    margin-bottom: 40px;
+    position: relative;
+    font-weight: 700;
+}
+
+.about-content {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-text, .about-features {
+    flex: 1; /* shares equal 50% width on screen */
+}
+
+.about-text p {
+    font-size: 16px;
+    color: #2C2C2C;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.about-features ul {
+    list-style: none; /* removes default bullet dots */
+}
+
+.about-features ul li {
+    font-size: 18px;
+    color: #1E3A5F;
+    font-weight: 600;
+    margin-bottom: 15px;
+    padding: 15px;
+    background: #F8F9FA;
+    border-left: 5px solid #D4AF37; /* Royal Gold vertical line */
+    border-radius: 0 5px 5px 0;
+}
+/* 6. Features Section Design */
+.features {
+    padding: 80px 0;
+    background: #F8F9FA; /* light gray background to contrast with about section */
+}
+
+.features-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.features-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background: white;
+    padding: 40px 30px;
+    flex: 1;
+    min-width: 280px; /* stops cards from getting too squished */
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* very soft shadow */
+    transition: 0.3s ease;
+}
+
+.feature-icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    color: #1E3A5F; /* Dark Blue */
+    font-size: 22px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.feature-card p {
+    font-size: 15px;
+    color: #2C2C2C;
+    line-height: 1.6;
+}
+
+/* Hover Effect */
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(30, 58, 95, 0.15); /* deeper blue shadow */
+    border-bottom: 4px solid #D4AF37; /* Gold accent line bottom */
+}
+/* 7. Career Categories Design */
+.categories {
+    padding: 80px 0;
+    background: #ffffff; /* pure white background */
+}
+
+.categories-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.category-card {
+    border: 2px solid #1E3A5F; /* Dark Blue border */
+    padding: 30px 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: 0.3s ease;
+    background: #ffffff;
+}
+
+.cat-icon {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.category-card h3 {
+    color: #1E3A5F;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.category-card p {
+    font-size: 14px;
+    color: #2C2C2C;
+    line-height: 1.5;
+}
+
+/* Hover Effect */
+.category-card:hover {
+    background: #1E3A5F; /* Switches to Dark Blue */
+    color: white;
+    transform: scale(1.05); /* slightly zooms in */
+}
+
+.category-card:hover h3, .category-card:hover p {
+    color: white; /* Inverts text color on hover */
+}
+/* 8. Footer Design */
+footer {
+    background: #1E3A5F; /* Dark Blue */
+    color: white;
+    padding: 30px 0;
+    margin-top: 60px; /* Gives top separation from last section */
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* wraps on mobile screens */
+    gap: 15px;
+}
+
+.footer-container p {
+    font-size: 14px;
+    color: #F8F9FA;
+}
+
+.footer-links a {
+    color: #F8F9FA;
+    text-decoration: none;
+    font-size: 14px;
+    margin-left: 20px;
+    transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #D4AF37; /* Royal Gold */
+}
+/* 9. Responsive Design (Mobile & Tablet) */
+@media (max-width: 768px) {
+    
+    /* Navbar Adjustment */
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    /* Hero Section Adjustment */
+    .hero h1 {
+        font-size: 32px; /* Decreased font size for mobile */
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    /* About Section Adjustment */
+    .about-content {
+        flex-direction: column; /* Text and Features stack vertically */
+        gap: 30px;
+    }
+
+    /* Footer Adjustment */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links a {
+        margin: 0 10px; /* Even spacing for links on mobile */
+    }
+}
+/* 10. Authentication Pages (Login/Register) Design */
+.auth-body {
+    background: #1E3A5F; /* Complete Dark Blue Background for Login/Register */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.auth-container {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 450px;
+    width: 100%;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.auth-container h2 {
+    color: #1E3A5F;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.auth-container p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: #1E3A5F;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #D4AF37; /* Turns Gold when clicked */
+    outline: none;
+    box-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
+}
+
+.auth-btn {
+    width: 100%;
+    padding: 12px;
+    background: #D4AF37; /* Royal Gold */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.auth-btn:hover {
+    background: #1E3A5F;
+}
+
+.auth-footer-text {
+    margin-top: 20px !important;
+}
+
+.auth-footer-text a {
+    color: #D4AF37;
+    text-decoration: none;
+    font-weight: 600;
+}
+/* 11. Dashboard Layout Design */
+.dashboard-body {
+    display: flex;
+    background: #F8F9FA;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 260px;
+    background: #1E3A5F; /* Dark Blue */
+    color: white;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-logo h2 {
+    color: #D4AF37; /* Royal Gold */
+    font-size: 24px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.sidebar-menu {
+    list-style: none;
+}
+
+.sidebar-menu li {
+    margin-bottom: 15px;
+}
+
+.sidebar-menu a {
+    color: #F8F9FA;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    padding: 12px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.sidebar-menu a:hover, .sidebar-menu a.active {
+    background: #D4AF37; /* Royal Gold */
+    color: white;
+}
+
+/* Main Area CSS */
+.dashboard-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.topbar {
+    background: white;
+    padding: 20px 40px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.topbar h3 {
+    color: #1E3A5F;
+}
+
+.dash-content {
+    padding: 40px;
+}
+
+.dash-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.dash-card {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.dash-card h4 {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.dash-num {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1E3A5F;
+    margin-bottom: 10px;
+}
+
+.status.pending {
+    color: #e74c3c; /* Red color for pending */
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.dash-link {
+    color: #D4AF37;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+}
+/* 12. Profile Page Design */
+.profile-card {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 20px;
+}
+
+.profile-card select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    background: white;
+}
+
+.profile-card select:focus {
+    border-color: #D4AF37;
+    outline: none;
+}
+
+.profile-save-btn {
+    padding: 12px 30px;
+    background: #1E3A5F; /* Dark Blue */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+.profile-save-btn:hover {
+    background: #D4AF37; /* Turns Gold on hover */
+}
+
+/* Small adjustment for mobile screens */
+@media (max-width: 600px) {
+    .profile-grid {
+        grid-template-columns: 1fr; /* Switches to 1 column on mobile */
+    }
+    .form-group[style*="grid-column"] {
+        grid-column: span 1 !important;
+    }
+}
+/* 13. Career Assessment Page Design */
+.assessment-card {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.test-instruction {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.quiz-group {
+    margin-bottom: 35px;
+}
+
+.question {
+    font-size: 18px;
+    color: #1E3A5F; /* Dark Blue */
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.radio-label {
+    display: block;
+    padding: 15px;
+    background: #F8F9FA;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.2s ease;
+}
+
+.radio-label:hover {
+    background: #F0F4F8;
+    border-color: #1E3A5F;
+}
+
+.radio-label input[type="radio"] {
+    margin-right: 10px;
+    accent-color: #D4AF37; /* Changes radio circle color to Royal Gold */
+    transform: scale(1.2);
+}
+
+.submit-test-btn {
+    padding: 14px 35px;
+    background: #D4AF37; /* Royal Gold */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    display: block;
+    width: 100%;
+}
+
+.submit-test-btn:hover {
+    background: #1E3A5F;
+}
+/* ==========================================================================
+   ABOUT PAGE & HOME MAIN SECTION STYLING (Royal Blue & Gold Theme)
+   ========================================================================== */
+
+/* Global Smooth Flow */
+main {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fcfdfd;
+    color: #333333;
+}
+
+/* 1. Hero Section Styling */
+.hero {
+    background: linear-gradient(135deg, #1E3A5F 0%, #0F2038 100%); /* Deep Royal Blue */
+    padding: 100px 20px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.hero h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto 35px auto;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+/* Get Started Button Design */
+.get-started-btn {
+    background-color: #D4AF37; /* Royal Gold */
+    color: #0F2038 !important;
+    font-weight: 600;
+    padding: 14px 35px;
+    font-size: 16px;
+    border-radius: 30px;
+    border: 2px solid #D4AF37;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.get-started-btn:hover {
+    background-color: transparent;
+    color: #D4AF37 !important;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+}
+
+/* 2. Common Section Layouts */
+section {
+    padding: 80px 20px;
+}
+
+.about-container, .features-container, .categories-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 32px;
+    color: #1E3A5F;
+    font-weight: 700;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #D4AF37;
+    margin: 8px auto 0 auto;
+    border-radius: 2px;
+}
+
+/* About Content Text */
+.about-text {
+    max-width: 850px;
+    margin: 0 auto 50px auto;
+}
+
+.about-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555555;
+    margin-bottom: 15px;
+}
+
+/* 3. About Features & Key Features (3 Pillars Grid Layout) */
+.about-features, .features-grid {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 25px 0;
+    margin-top: 30px;
+}
+
+.feature, .feature-card {
+    display: table-cell;
+    background: #FFFFFF;
+    padding: 35px 25px;
+    border-radius: 12px;
+    border: 1px solid #EAEAEA;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    text-align: left;
+    vertical-align: top;
+    transition: all 0.3s ease;
+}
+
+/* Hover Animations for Cards */
+.feature:hover, .feature-card:hover {
+    transform: translateY(-8px);
+    border-color: #D4AF37;
+    box-shadow: 0 12px 24px rgba(30, 58, 95, 0.1);
+}
+
+.feature h3, .feature-card h3 {
+    font-size: 20px;
+    color: #1E3A5F;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.feature p, .feature-card p {
+    font-size: 14px;
+    color: #666666;
+    line-height: 1.6;
+}
+
+.feature-icon {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+/* 4. Explore Career Categories (4 Grid Layout Fix) */
+.categories {
+    background-color: #F4F7FA; /* Subtle Light Grey Background */
+}
+
+.categories-grid {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 20px 0;
+}
+
+.category-card {
+    display: table-cell;
+    background: #FFFFFF;
+    padding: 30px 20px;
+    border-radius: 10px;
+    border-top: 4px solid #1E3A5F; /* Blue Accent Top Border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    text-align: center;
+    vertical-align: top;
+    transition: all 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    border-top-color: #D4AF37; /* Changes to Gold on Hover */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.cat-icon {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.category-card h3 {
+    font-size: 18px;
+    color: #1E3A5F;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.category-card p {
+    font-size: 13px;
+    color: #777777;
+    line-height: 1.5;
+}
+
+/* Responsive Overrides Using Traditional Block Layout for Mobiles */
+@media (max-width: 768px) {
+    .about-features, .features-grid, .categories-grid {
+        display: block;
+    }
+    .feature, .feature-card, .category-card {
+        display: block;
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    .hero h1 {
+        font-size: 30px;
+    }
+    .hero p {
+        font-size: 15px;
+    }
+}

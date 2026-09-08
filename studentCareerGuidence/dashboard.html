@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Dashboard - CareerGuide</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="dashboard-body">
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <h2>CareerGuide</h2>
+      </div>
+      <ul class="sidebar-menu">
+        <li><a href="dashboard.php" class="active">📊 Dashboard</a></li>
+        <li><a href="profile.html">👤 My Profile</a></li>
+        <li><a href="assessment.html">📝 Career Test</a></li>
+        <li><a href="index.html">🚪 Logout</a></li>
+      </ul>
+    </aside>
+
+    <div class="dashboard-main">
+      <header class="topbar">
+        <div class="welcome-msg">
+          <h3>Welcome back, <span id="student-name">Student!</span></h3>
+        </div>
+      </header>
+
+      <main class="dash-content">
+        <div class="dash-cards">
+          <div class="dash-card">
+            <h4>Test Status</h4>
+            <p class="status pending">If You want</p>
+            <a href="assessment.html" class="dash-link"
+              >Take Another Test Now →</a
+            >
+          </div>
+          <div class="dash-card">
+            <h4>Profile Completion</h4>
+            <p class="status completed">
+              Complete your profile to get better recommendations.
+            </p>
+            <a href="profile.php" class="dash-link">Update Profile</a>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
